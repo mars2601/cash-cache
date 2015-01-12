@@ -1,0 +1,1184 @@
+@charset "UTF-8";
+/* Cash-Cache - ATM Finder
+ *
+ * SASS/CSS Document - /styles/screen.css
+ *
+ * coded by leny @ flatLand!
+ * started at 06/06/13
+ */
+@import url(fonts/lato.css);
+@import url(fonts/fontawesome.css);
+/* line 5, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+@-webkit-keyframes rotation {
+  0% {
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes rotation {
+  0% {
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-ms-keyframes rotation {
+  0% {
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotation {
+  0% {
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+/* line 34, ../sass/screen.sass */
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.5);
+}
+
+/* line 37, ../sass/screen.sass */
+html, body {
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* line 41, ../sass/screen.sass */
+html {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: black;
+}
+
+/* line 47, ../sass/screen.sass */
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font: normal 82.5%/1.5 "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 1px 0 50px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 54, ../sass/screen.sass */
+body #confirm-button {
+  position: absolute;
+  bottom: 0;
+  padding: 15px 0;
+  width: 100%;
+  text-align: center;
+  background: white;
+  text-decoration: none;
+  color: #1ABC9C;
+  z-index: 1000;
+  font: bold 1.3em "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* line 65, ../sass/screen.sass */
+.header {
+  width: 100%;
+  height: 400px;
+  background: transparent url('/images/header.jpg') center no-repeat;
+  background-size: cover;
+  -webkit-filter: blur(2px) grayscale(1);
+  filter: blur(2px) grayscale(1);
+}
+
+/* line 74, ../sass/screen.sass */
+#map-holder {
+  position: absolute;
+  width: 100%;
+  height: 93%;
+  bottom: 0;
+  z-index: 10;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 81, ../sass/screen.sass */
+#map-holder #gmap {
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+}
+/* line 85, ../sass/screen.sass */
+#map-holder #gmap.blured {
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+}
+/* line 87, ../sass/screen.sass */
+#map-holder #gmap.blured:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* line 96, ../sass/screen.sass */
+#main {
+  position: absolute;
+  width: 100%;
+  margin: 0 auto 0;
+  top: 0;
+  z-index: 20;
+  background: rgba(255, 255, 255, 0.9);
+  -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  -moz-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+/* line 106, ../sass/screen.sass */
+#main header {
+  position: relative;
+  background: #1ABC9C;
+  padding: 8px;
+}
+/* line 110, ../sass/screen.sass */
+#main header h1 {
+  font: normal 2em "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: white;
+  text-align: center;
+}
+/* line 114, ../sass/screen.sass */
+#main header a {
+  position: absolute;
+  color: white;
+  top: 11px;
+  text-decoration: none;
+}
+/* line 119, ../sass/screen.sass */
+#main header a span {
+  display: none;
+}
+/* line 121, ../sass/screen.sass */
+#main header a#about {
+  display: none;
+  top: 8px;
+  right: 9px;
+}
+/* line 125, ../sass/screen.sass */
+#main header a#about:before {
+  content: "";
+  font: normal 2.2em "FontAwesome";
+}
+/* line 128, ../sass/screen.sass */
+#main header a#about:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 38px;
+  top: -8px;
+  left: -12px;
+  background: transparent;
+}
+/* line 137, ../sass/screen.sass */
+#main header a#problems {
+  display: none;
+  top: 8px;
+  right: 9px;
+}
+/* line 141, ../sass/screen.sass */
+#main header a#problems:before {
+  content: "";
+  font: normal 2.2em "FontAwesome";
+}
+/* line 144, ../sass/screen.sass */
+#main header a#problems:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 38px;
+  top: -8px;
+  left: -12px;
+  background: transparent;
+}
+/* line 153, ../sass/screen.sass */
+#main header a#back {
+  display: none;
+  left: 11px;
+}
+/* line 156, ../sass/screen.sass */
+#main header a#back:before {
+  content: "";
+  font: normal 1.6em "FontAwesome";
+}
+/* line 159, ../sass/screen.sass */
+#main header a#back:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 44px;
+  height: 44px;
+  top: -14px;
+  left: -14px;
+  background: transparent;
+}
+/* line 168, ../sass/screen.sass */
+#main #status {
+  position: relative;
+  padding: 10px 12px;
+  background: #212542;
+  border-left: 6px solid #1ABC9C;
+  color: white;
+}
+/* line 174, ../sass/screen.sass */
+#main #status h3 {
+  font: 300 1.6em "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/* line 176, ../sass/screen.sass */
+#main #status h3 strong {
+  font-weight: normal;
+}
+/* line 178, ../sass/screen.sass */
+#main #status a {
+  position: absolute;
+  display: block;
+  color: white;
+  top: 0;
+  right: 0;
+  width: 38px;
+  height: 38px;
+  text-decoration: none;
+  text-align: center;
+}
+/* line 188, ../sass/screen.sass */
+#main #status a span {
+  display: none;
+}
+/* line 190, ../sass/screen.sass */
+#main #status a:before {
+  content: "";
+  font: normal 1.8em/38px "FontAwesome";
+  vertical-align: middle;
+}
+/* line 196, ../sass/screen.sass */
+#main #status.loading a {
+  -webkit-animation: rotation 0.75s infinite linear;
+  -moz-animation: rotation 0.75s infinite linear;
+  animation: rotation 0.75s infinite linear;
+}
+/* line 200, ../sass/screen.sass */
+#main #result {
+  position: relative;
+  max-height: 250px;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+/* line 206, ../sass/screen.sass */
+#main #result ul li {
+  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+/* line 208, ../sass/screen.sass */
+#main #result ul li:first-child {
+  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+/* line 210, ../sass/screen.sass */
+#main #result ul li a {
+  display: block;
+  padding: 14px 13px;
+  text-decoration: none;
+  *zoom: 1;
+}
+/* line 38, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/general/_clearfix.scss */
+#main #result ul li a:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 215, ../sass/screen.sass */
+#main #result ul li a img {
+  height: 16px;
+  vertical-align: middle;
+  margin: 0 5px 0 0;
+}
+/* line 219, ../sass/screen.sass */
+#main #result ul li a strong {
+  font: bold 1.6em "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  vertical-align: middle;
+  color: #333;
+}
+/* line 223, ../sass/screen.sass */
+#main #result ul li a span {
+  font: 300 1.2em "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  float: right;
+  margin: 4px 0 0;
+  color: #1ABC9C;
+}
+/* line 230, ../sass/screen.sass */
+#main #result ul li.empty a img {
+  display: none;
+}
+/* line 232, ../sass/screen.sass */
+#main #result ul li.empty a strong:before {
+  content: "";
+  font: normal 1em "FontAwesome";
+  margin: 0 5px 0 0;
+  vertical-align: middle;
+}
+/* line 237, ../sass/screen.sass */
+#main #result a#add-terminal, #main #result a#see-all {
+  display: none;
+  padding: 14px 13px;
+  text-decoration: none;
+  color: #1ABC9C;
+  border-left: 6px solid #1ABC9C;
+}
+/* line 243, ../sass/screen.sass */
+#main #result a#add-terminal strong, #main #result a#see-all strong {
+  font: bold 1.6em "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  vertical-align: middle;
+}
+/* line 246, ../sass/screen.sass */
+#main #result a#add-terminal:before, #main #result a#see-all:before {
+  vertical-align: middle;
+  margin: 0 5px 0 0;
+}
+/* line 249, ../sass/screen.sass */
+#main #result a#add-terminal:before {
+  content: "";
+  font: normal 1.6em "FontAwesome";
+  vertical-align: middle;
+}
+/* line 254, ../sass/screen.sass */
+#main #result a#see-all:before {
+  content: "";
+  font: normal 1.6em "FontAwesome";
+}
+/* line 257, ../sass/screen.sass */
+#main #result a#see-all.see-list:before {
+  content: "";
+  font: normal 1.6em "FontAwesome";
+}
+/* line 260, ../sass/screen.sass */
+#main #details {
+  display: none;
+  position: relative;
+  padding: 8px 8px;
+  min-height: 25px;
+}
+/* line 265, ../sass/screen.sass */
+#main #details h3 {
+  margin: 0 auto 3px;
+}
+/* line 267, ../sass/screen.sass */
+#main #details h3 img {
+  height: 16px;
+  margin: 0 5px 0 0;
+  vertical-align: middle;
+}
+/* line 271, ../sass/screen.sass */
+#main #details h3 span {
+  color: #333;
+  font: bold 1.4em "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  vertical-align: middle;
+}
+/* line 275, ../sass/screen.sass */
+#main #details address {
+  margin: 0 auto;
+  padding: 0 150px 0 0;
+  font: normal 1.2em/1.5 "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/* line 279, ../sass/screen.sass */
+#main #details div.empty {
+  margin: 4px auto 0;
+}
+/* line 281, ../sass/screen.sass */
+#main #details div.empty p {
+  display: inline-block;
+  padding: 4px 6px 3px;
+  font: normal 1.6em "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #212542;
+  color: white;
+}
+/* line 287, ../sass/screen.sass */
+#main #details div.empty p:before {
+  content: "";
+  font: normal 1em "FontAwesome";
+  margin: 0 3px 0 0;
+  vertical-align: middle;
+}
+/* line 292, ../sass/screen.sass */
+#main #details div.infos {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+}
+/* line 296, ../sass/screen.sass */
+#main #details div.infos span#distance {
+  display: inline-block;
+  padding: 4px 6px;
+  font: normal 1.6em "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #1ABC9C;
+  color: white;
+  margin: 0 2px 0 0;
+  vertical-align: middle;
+}
+/* line 304, ../sass/screen.sass */
+#main #details div.infos a#refresh-me {
+  position: relative;
+  display: inline-block;
+  padding: 5px 6px 4px;
+  font: normal 1.6em "FontAwesome";
+  background: #1ABC9C;
+  color: white;
+  text-decoration: none;
+  vertical-align: middle;
+}
+/* line 313, ../sass/screen.sass */
+#main #details div.infos a#refresh-me span {
+  display: none;
+}
+/* line 315, ../sass/screen.sass */
+#main #details div.infos a#refresh-me:before {
+  content: "";
+}
+/* line 317, ../sass/screen.sass */
+#main #details div.infos a#refresh-me:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 44px;
+  height: 44px;
+  top: -10px;
+  left: -10px;
+  background: transparent;
+}
+/* line 326, ../sass/screen.sass */
+#main #details div.problems {
+  display: none;
+  margin: 8px auto 0;
+  border-top: 1px solid #BDC3C7;
+  padding: 0 0 0;
+}
+/* line 331, ../sass/screen.sass */
+#main #details div.problems p.define_new_place {
+  padding: 10px 0 5px;
+  font: bold 1.3em "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #e85445;
+}
+/* line 335, ../sass/screen.sass */
+#main #details div.problems p.define_new_place span.add-warn {
+  font: bold 0.9em "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  display: block;
+  opacity: 0.7;
+  padding: 6px 0 0;
+}
+/* line 340, ../sass/screen.sass */
+#main #details div.problems a {
+  display: block;
+  margin: 8px auto 0;
+  padding: 10px 6px;
+  font: normal 1.5em "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-align: center;
+  background: #e85445;
+  color: white;
+  vertical-align: middle;
+  text-decoration: none;
+}
+/* line 351, ../sass/screen.sass */
+#main #details div.change_bank, #main #details div.change_place, #main #details div.confirm_problem {
+  display: none;
+  margin: 8px auto 0;
+  border-top: 1px solid #BDC3C7;
+  padding: 8px 0 0;
+}
+/* line 356, ../sass/screen.sass */
+#main #details div.change_bank p, #main #details div.change_place p, #main #details div.confirm_problem p {
+  font: normal 1.2em/1.5 "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0 auto 3px;
+}
+/* line 359, ../sass/screen.sass */
+#main #details div.change_bank select, #main #details div.change_place select, #main #details div.confirm_problem select {
+  display: inline-block;
+  width: 100%;
+  min-height: 44px;
+  vertical-align: middle;
+}
+/* line 364, ../sass/screen.sass */
+#main #details div.change_bank a, #main #details div.change_place a, #main #details div.confirm_problem a {
+  color: white;
+  padding: 8px 6px;
+  margin: 8px auto 8px;
+  font: normal 1.5em "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  background: #34495E;
+  border: 0;
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+  text-transform: uppercase;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+}
+/* line 378, ../sass/screen.sass */
+#main #details div.change_bank input, #main #details div.change_place input, #main #details div.confirm_problem input {
+  display: inline-block;
+  color: white;
+  padding: 8px 6px;
+  font: normal 1.5em "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  -webkit-appearance: none;
+  background: #2ECC71 !important;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  border: 0;
+  width: 100%;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+/* line 391, ../sass/screen.sass */
+#main #details div.change_place {
+  border-top: 0;
+  padding: 0;
+}
+/* line 394, ../sass/screen.sass */
+#main #adding {
+  display: none;
+  position: relative;
+  padding: 8px 8px;
+}
+/* line 398, ../sass/screen.sass */
+#main #adding h4 {
+  color: #E67E22;
+  font: bold 1.4em "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0 auto 3px;
+}
+/* line 402, ../sass/screen.sass */
+#main #adding p {
+  font: normal 1.2em/1.5 "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0 auto 3px;
+}
+/* line 406, ../sass/screen.sass */
+#main #adding form .input {
+  margin: 0 auto 8px;
+}
+/* line 408, ../sass/screen.sass */
+#main #adding form .input label {
+  display: inline-block;
+  width: 30%;
+  font: bold 1.4em "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #999;
+  vertical-align: middle;
+}
+/* line 414, ../sass/screen.sass */
+#main #adding form .input select {
+  display: inline-block;
+  width: 65%;
+  min-height: 44px;
+  vertical-align: middle;
+}
+/* line 419, ../sass/screen.sass */
+#main #adding form .buttons {
+  *zoom: 1;
+}
+/* line 38, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/general/_clearfix.scss */
+#main #adding form .buttons:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 421, ../sass/screen.sass */
+#main #adding form .buttons a#refresh {
+  color: white;
+  padding: 8px 7px;
+  font: normal 1.5em "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  background: #95A5A6;
+  float: left;
+  vertical-align: middle;
+}
+/* line 429, ../sass/screen.sass */
+#main #adding form .buttons input {
+  border: 0;
+  color: white;
+  padding: 8px 7px;
+  font: normal 1.5em "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  -webkit-appearance: none;
+  background: #2ECC71 !important;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  vertical-align: middle;
+  margin: 0;
+  float: right;
+}
+/* line 441, ../sass/screen.sass */
+#main #aboutbox {
+  display: none;
+  padding: 8px;
+}
+/* line 444, ../sass/screen.sass */
+#main #aboutbox p {
+  font: normal 1.3em/1.5 "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0 auto 3px;
+}
+/* line 447, ../sass/screen.sass */
+#main #aboutbox nav {
+  margin: 8px auto;
+}
+/* line 449, ../sass/screen.sass */
+#main #aboutbox nav a {
+  display: block;
+  margin: 0 auto 12px 10px;
+  font: normal 1.5em/34px "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  color: #3498DB;
+}
+/* line 455, ../sass/screen.sass */
+#main #aboutbox nav a:before {
+  display: inline-block;
+  margin: 0 5px 0 0;
+  font: normal 1.1em "FontAwesome";
+  width: 22px;
+  text-align: center;
+  vertical-align: middle;
+}
+/* line 462, ../sass/screen.sass */
+#main #aboutbox nav a.twitter:before {
+  content: "";
+}
+/* line 464, ../sass/screen.sass */
+#main #aboutbox nav a.facebook:before {
+  content: "";
+}
+/* line 466, ../sass/screen.sass */
+#main #aboutbox hr {
+  border: 0;
+  height: 1px;
+  background: #95A5A6;
+  margin: 0 auto 5px;
+}
+/* line 471, ../sass/screen.sass */
+#main #aboutbox div {
+  text-align: center;
+  padding: 5px 0 0;
+}
+/* line 474, ../sass/screen.sass */
+#main #aboutbox div a {
+  display: block;
+}
+/* line 476, ../sass/screen.sass */
+#main #aboutbox div a img {
+  border: 0;
+}
+/* line 478, ../sass/screen.sass */
+#main #aboutbox div span {
+  display: block;
+  font: normal 1.2em/1.5 "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/* line 481, ../sass/screen.sass */
+#main #aboutbox div small {
+  display: block;
+  font: 300 1.1em/1.5 "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/* line 484, ../sass/screen.sass */
+#main.see-all {
+  margin: 20px auto 0;
+}
+/* line 486, ../sass/screen.sass */
+#main.see-all header a#about {
+  display: none;
+}
+/* line 488, ../sass/screen.sass */
+#main.details {
+  margin: 20px auto 0;
+  min-height: 0;
+}
+/* line 492, ../sass/screen.sass */
+#main.details header #back {
+  display: inline;
+}
+/* line 494, ../sass/screen.sass */
+#main.details header h1 {
+  margin: 0 0 0 30px;
+}
+/* line 496, ../sass/screen.sass */
+#main.details header a#about {
+  display: none;
+}
+/* line 498, ../sass/screen.sass */
+#main.details #status {
+  display: none;
+}
+/* line 500, ../sass/screen.sass */
+#main.details #result {
+  display: none;
+}
+/* line 502, ../sass/screen.sass */
+#main.details #details {
+  display: block;
+}
+/* line 504, ../sass/screen.sass */
+#main.details #aboutbox {
+  display: none;
+}
+/* line 506, ../sass/screen.sass */
+#main.adding {
+  margin: 20px auto 0;
+  min-height: 0;
+}
+/* line 510, ../sass/screen.sass */
+#main.adding header #back {
+  display: inline;
+}
+/* line 512, ../sass/screen.sass */
+#main.adding header h1 {
+  margin: 0 0 0 30px;
+}
+/* line 514, ../sass/screen.sass */
+#main.adding header a#about {
+  display: none;
+}
+/* line 516, ../sass/screen.sass */
+#main.adding #status {
+  display: none;
+}
+/* line 518, ../sass/screen.sass */
+#main.adding #result {
+  display: none;
+}
+/* line 520, ../sass/screen.sass */
+#main.adding #details {
+  display: none;
+}
+/* line 522, ../sass/screen.sass */
+#main.adding #adding {
+  display: block;
+}
+/* line 524, ../sass/screen.sass */
+#main.adding #aboutbox {
+  display: none;
+}
+/* line 526, ../sass/screen.sass */
+#main.about {
+  min-height: 0;
+}
+/* line 529, ../sass/screen.sass */
+#main.about header #back {
+  display: inline;
+}
+/* line 531, ../sass/screen.sass */
+#main.about header h1 {
+  margin: 0 0 0 30px;
+}
+/* line 533, ../sass/screen.sass */
+#main.about header a#about {
+  display: none;
+}
+/* line 535, ../sass/screen.sass */
+#main.about #status {
+  display: none;
+}
+/* line 537, ../sass/screen.sass */
+#main.about #result {
+  display: none;
+}
+/* line 539, ../sass/screen.sass */
+#main.about #details {
+  display: none;
+}
+/* line 541, ../sass/screen.sass */
+#main.about #adding {
+  display: none;
+}
+/* line 543, ../sass/screen.sass */
+#main.about #aboutbox {
+  display: block;
+}
+
+/* line 546, ../sass/screen.sass */
+#ad-holder {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: grey;
+  text-align: center;
+}
+/* line 554, ../sass/screen.sass */
+#ad-holder:before {
+  font: 300 1.6em/50px "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: white;
+  content: "espace publicitaire";
+}
+
+/* line 559, ../sass/screen.sass */
+#warning {
+  display: none;
+}
+
+/* line 562, ../sass/screen.sass */
+#install-app {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: transparent;
+}
+/* line 571, ../sass/screen.sass */
+#install-app .close {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 150;
+  background: transparent;
+  text-indent: -999em;
+}
+/* line 580, ../sass/screen.sass */
+#install-app .box {
+  position: absolute;
+  width: 60%;
+  bottom: 15px;
+  left: 50%;
+  margin: 0 0 0 -30%;
+  z-index: 120;
+  background: white;
+  -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+/* line 590, ../sass/screen.sass */
+#install-app .box h4 {
+  position: relative;
+  background: #3498DB;
+  padding: 8px;
+  font: normal 1.6em "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: white;
+}
+/* line 596, ../sass/screen.sass */
+#install-app .box p {
+  padding: 8px;
+  font: normal 1.4em/1.5 "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/* line 599, ../sass/screen.sass */
+#install-app .box p strong {
+  font-weight: bold;
+}
+/* line 601, ../sass/screen.sass */
+#install-app .box:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top: 10px solid white;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  margin: 0 0 0 -10px;
+}
+
+/* line 612, ../sass/screen.sass */
+#modal {
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1px 0 0;
+  background: rgba(0, 0, 0, 0.8);
+}
+/* line 622, ../sass/screen.sass */
+#modal a {
+  display: block;
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1200;
+  color: transparent;
+}
+/* line 632, ../sass/screen.sass */
+#modal .box {
+  position: relative;
+  width: 80%;
+  background: white;
+  margin: 40% auto 0;
+  z-index: 1100;
+  -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+/* line 639, ../sass/screen.sass */
+#modal .box h4 {
+  position: relative;
+  background: #95A5A6;
+  padding: 8px;
+  font: 300 2em "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: white;
+  text-transform: uppercase;
+}
+/* line 646, ../sass/screen.sass */
+#modal .box h4:before {
+  content: "";
+  font: normal 1em "FontAwesome";
+  margin: 0 8px 0 0;
+}
+/* line 650, ../sass/screen.sass */
+#modal .box div.message {
+  padding: 8px;
+}
+/* line 652, ../sass/screen.sass */
+#modal .box div.message p {
+  font: normal 1.4em/1.5 "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/* line 654, ../sass/screen.sass */
+#modal.error .box h4 {
+  background: #C0392B;
+}
+/* line 656, ../sass/screen.sass */
+#modal.success .box h4 {
+  background: #27AE60;
+}
+
+/* line 659, ../sass/screen.sass */
+body.ios {
+  min-height: 416px;
+}
+/* line 661, ../sass/screen.sass */
+body.ios.big {
+  min-height: 504px;
+}
+/* line 663, ../sass/screen.sass */
+body.ios.big #main #result {
+  max-height: 320px;
+}
+
+/* line 666, ../sass/screen.sass */
+body.android.old {
+  overflow: visible;
+  min-height: 0;
+}
+/* line 669, ../sass/screen.sass */
+body.android.old #map-holder {
+  position: fixed;
+  height: 455px;
+}
+/* line 672, ../sass/screen.sass */
+body.android.old #ad-holder {
+  position: fixed;
+}
+/* line 675, ../sass/screen.sass */
+body.android.old #main #result {
+  max-height: none;
+  overflow: visible;
+}
+/* line 678, ../sass/screen.sass */
+body.android.old:after {
+  content: "";
+  position: relative;
+  width: 10px;
+  background: transparent;
+  height: 60px;
+  display: block;
+  margin: 0 auto;
+}
+
+@media screen and (orientation: landscape) and (min-width: 480px) and (max-width: 1023px) {
+  /* line 688, ../sass/screen.sass */
+  body {
+    min-height: 300px;
+    padding: 0;
+    background: black url('/images/bcg.png') top left repeat;
+  }
+
+  /* line 692, ../sass/screen.sass */
+  #map-holder, #main, #ad-holder {
+    display: none;
+  }
+
+  /* line 694, ../sass/screen.sass */
+  #warning {
+    position: absolute;
+    display: block;
+    color: #eee;
+    padding: 10% 0 0;
+    *zoom: 1;
+  }
+  /* line 38, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/general/_clearfix.scss */
+  #warning:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  /* line 700, ../sass/screen.sass */
+  #warning h1 {
+    font: 300 2em "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0 0 20px;
+    float: left;
+    width: 50%;
+    text-align: center;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.75);
+  }
+  /* line 707, ../sass/screen.sass */
+  #warning h1 img {
+    display: block;
+    margin: 0 auto 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.75);
+  }
+  /* line 712, ../sass/screen.sass */
+  #warning p {
+    padding: 2% 30px 0 0;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.75);
+    font: normal 1em/1.25 "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+}
+@media screen and (min-width: 1025px) {
+  /* line 718, ../sass/screen.sass */
+  html, body {
+    overflow: visible !important;
+  }
+
+  /* line 720, ../sass/screen.sass */
+  html {
+    background: white;
+  }
+
+  /* line 723, ../sass/screen.sass */
+  #demo {
+    width: 362px;
+    height: 642px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin: -240px 0 0 -160px;
+    font: normal 100%/1.2 "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: white;
+  }
+  /* line 732, ../sass/screen.sass */
+  #demo:after {
+    position: absolute;
+    left: -58px;
+    top: -108px;
+    display: block;
+    content: "";
+    width: 476px;
+    height: 875px;
+    background: transparent url('/images/nexus-5.png') top left no-repeat;
+  }
+}
